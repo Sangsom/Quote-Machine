@@ -26,6 +26,7 @@
 		1B50F1E622F31B7100E54023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B50F1F022F444C100E54023 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		1B50F1F622F45E9200E54023 /* QuoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteController.swift; sourceTree = "<group>"; };
+		1B50F1F822F46A0300E54023 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,7 @@
 		1B50F1CE22F31B7100E54023 = {
 			isa = PBXGroup;
 			children = (
+				1B50F1F822F46A0300E54023 /* README.md */,
 				1B50F1D922F31B7100E54023 /* Quote Machine */,
 				1B50F1D822F31B7100E54023 /* Products */,
 			);
