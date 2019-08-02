@@ -15,6 +15,7 @@
 		1B50F1F122F444C100E54023 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50F1F022F444C100E54023 /* Quote.swift */; };
 		1B50F1F322F444DC00E54023 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50F1F222F444DC00E54023 /* Quotes.swift */; };
 		1B50F1F522F4451A00E54023 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50F1F422F4451A00E54023 /* Contents.swift */; };
+		1B50F1F722F45E9200E54023 /* QuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50F1F622F45E9200E54023 /* QuoteController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1B50F1F022F444C100E54023 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		1B50F1F222F444DC00E54023 /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
 		1B50F1F422F4451A00E54023 /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
+		1B50F1F622F45E9200E54023 /* QuoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				1B50F1E122F31B7100E54023 /* Assets.xcassets */,
 				1B50F1E322F31B7100E54023 /* LaunchScreen.storyboard */,
 				1B50F1E622F31B7100E54023 /* Info.plist */,
+				1B50F1F622F45E9200E54023 /* QuoteController.swift */,
 			);
 			path = "Quote Machine";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B50F1F722F45E9200E54023 /* QuoteController.swift in Sources */,
 				1B50F1F322F444DC00E54023 /* Quotes.swift in Sources */,
 				1B50F1F522F4451A00E54023 /* Contents.swift in Sources */,
 				1B50F1DD22F31B7100E54023 /* ViewController.swift in Sources */,
