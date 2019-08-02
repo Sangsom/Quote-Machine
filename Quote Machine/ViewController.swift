@@ -12,24 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet var quoteLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
-    var quotes = [Quote]()
-
-    var quoteController = QuoteController()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        quoteController.fetchQuote { (quotes) in
-            if let quotes = quotes {
-                DispatchQueue.main.async {
-                    self.quotes = quotes
-                }
-            }
-        }
 
-
-        print(quotes)
     }
 
 
