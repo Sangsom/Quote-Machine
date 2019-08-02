@@ -18,9 +18,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        quoteController.fetchDailyQuote { (quoteInfo) in
-            if let quoteInfo = quoteInfo {
-                self.updateUI(with: quoteInfo.contents.quotes.first!)
+        quoteController.fetchDailyQuote { (quoteData) in
+            if let quoteData = quoteData,
+                let dailyQuote = quoteData.contents.quotes.first {
+                    self.updateUI(with: dailyQuote)
             }
         }
     }

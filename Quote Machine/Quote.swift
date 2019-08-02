@@ -12,3 +12,11 @@ struct Quote: Codable {
     var quote: String
     var author: String
 }
+
+struct Quotes: Codable {
+    var quotes: [Quote]
+}
+
+struct Contents: Codable {
+    var contents: Quotes
+}
