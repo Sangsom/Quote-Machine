@@ -22,7 +22,6 @@ class QuoteController {
                 let quoteData = try? jsonDecode.decode(QuoteContents.self, from: data) {
                 completion(quoteData)
             } else {
-                print("Either no data was returned, or data was not serialized.")
                 completion(nil)
             }
         }
@@ -38,7 +37,6 @@ class QuoteController {
                 let categoriesData = try? jsonDecode.decode(CategoriesContents.self, from: data) {
                 completion(categoriesData)
             } else {
-                print("Either no data was returned, or data was not serialized.")
                 completion(nil)
             }
         }
@@ -56,7 +54,6 @@ class QuoteController {
                 let quoteData = try? jsonDecode.decode(QuoteContents.self, from: data) {
                 completion(quoteData)
             } else {
-                print("Either no data was returned, or data was not serialized.")
                 completion(nil)
             }
         }

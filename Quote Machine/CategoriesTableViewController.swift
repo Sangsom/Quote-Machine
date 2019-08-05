@@ -19,11 +19,17 @@ class CategoriesTableViewController: UITableViewController {
 
         QuoteController.shared.fetchCategories { (categoriesData) in
             if let categoriesData = categoriesData {
-                print(categoriesData.contents.categories)
                 DispatchQueue.main.async {
                     self.categories = categoriesData.contents.categories
                     self.tableView.reloadData()
                 }
+            } else {
+                let ac = UIAlertController(
+                    title: "Loading error",
+                    message: "Either no data was returned, or data was not serialized",
+                    preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(ac, animated: true)
             }
         }
     }

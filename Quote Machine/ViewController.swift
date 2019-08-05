@@ -28,11 +28,11 @@ class ViewController: UIViewController {
             if let quoteData = quoteData,
                 let dailyQuote = quoteData.contents.quotes.first {
                     self.updateUI(with: dailyQuote)
-                    DispatchQueue.main.async {
-                        child.willMove(toParent: nil)
-                        child.view.removeFromSuperview()
-                        child.removeFromParent()
-                    }
+                DispatchQueue.main.async {
+                    child.willMove(toParent: nil)
+                    child.view.removeFromSuperview()
+                    child.removeFromParent()
+                }
             }
         }
     }
