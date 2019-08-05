@@ -10,8 +10,8 @@ import UIKit
 
 class CategoriesTableViewController: UITableViewController {
 
-    var categories: [String: String] = [:]
-    var sampleCategories: [String: String] = [
+    //var categories: [String: String] = [:]
+    var categories: [String: String] = [
         "inspire": "Inspiring Quote of the day",
         "management": "Management Quote of the day",
         "sports": "Sports Quote of the dat"
@@ -22,25 +22,24 @@ class CategoriesTableViewController: UITableViewController {
 
         title = "QOD Categories"
 
-//        QuoteController.shared.fetchCategories { (categoriesData) in
-//            if let categoriesData = categoriesData {
-//                print(categoriesData.contents.categories)
-//            }
-//        }
-
-//        if let quoteData = quoteData,
-//            let dailyQuote = quoteData.contents.quotes.first {
-//            self.updateUI(with: dailyQuote)
-//        }
+        QuoteController.shared.fetchCategories { (categoriesData) in
+            if let categoriesData = categoriesData {
+                print(categoriesData.contents.categories)
+                DispatchQueue.main.async {
+                    self.categories = categoriesData.contents.categories
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sampleCategories.count
+        return categories.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath)
-        let categoryItem = Array(sampleCategories)[indexPath.row]
+        let categoryItem = Array(categories)[indexPath.row]
         cell.textLabel?.text = categoryItem.value
         return cell
     }
@@ -53,7 +52,7 @@ class CategoriesTableViewController: UITableViewController {
         if segue.identifier == "ShowQuoteIdentifier" {
             let quoteByCategoryViewController = segue.destination as! QuoteByCategoryViewController
             let index = tableView.indexPathForSelectedRow?.row
-            let categoryItem = Array(sampleCategories)[index!]
+            let categoryItem = Array(categories)[index!]
             quoteByCategoryViewController.category = categoryItem.key
         }
     }
