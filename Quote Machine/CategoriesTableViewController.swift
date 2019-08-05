@@ -46,7 +46,15 @@ class CategoriesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Open VC to see quote by category
+        performSegue(withIdentifier: "ShowQuoteIdentifier", sender: self)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowQuoteIdentifier" {
+            let quoteByCategoryViewController = segue.destination as! QuoteByCategoryViewController
+            let index = tableView.indexPathForSelectedRow?.row
+            let categoryItem = Array(sampleCategories)[index!]
+            quoteByCategoryViewController.category = categoryItem.key
+        }
+    }
 }
