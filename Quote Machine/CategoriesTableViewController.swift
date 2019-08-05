@@ -10,12 +10,7 @@ import UIKit
 
 class CategoriesTableViewController: UITableViewController {
 
-    //var categories: [String: String] = [:]
-    var categories: [String: String] = [
-        "inspire": "Inspiring Quote of the day",
-        "management": "Management Quote of the day",
-        "sports": "Sports Quote of the dat"
-    ]
+    var categories: [String: String] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
