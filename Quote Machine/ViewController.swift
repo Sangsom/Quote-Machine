@@ -13,13 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var quoteLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
-
-    let quoteController = QuoteController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        quoteController.fetchDailyQuote { (quoteData) in
+        QuoteController.shared.fetchDailyQuote { (quoteData) in
             if let quoteData = quoteData,
                 let dailyQuote = quoteData.contents.quotes.first {
                     self.updateUI(with: dailyQuote)

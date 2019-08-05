@@ -10,9 +10,12 @@ import UIKit
 
 class CategoriesTableViewController: UITableViewController {
 
+    var categories: [String: String] = [:]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "QOD Categories"
     }
 
 }

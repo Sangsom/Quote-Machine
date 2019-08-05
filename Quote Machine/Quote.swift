@@ -22,3 +22,7 @@ struct Quotes: Codable {
 struct Contents: Codable {
     var contents: Quotes
 }
+
+struct Categories: Codable {
+    var categories: [String: String]
+}
