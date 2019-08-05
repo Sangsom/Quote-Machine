@@ -19,10 +19,22 @@ class QuoteByCategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let child = SpinnerViewController()
+
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+
         QuoteController.shared.fetchQuoteByCategory(category) { (quoteData) in
             if let quoteData = quoteData,
                 let dailyQuote = quoteData.contents.quotes.first {
                 self.updateUI(with: dailyQuote)
+                DispatchQueue.main.async {
+                    child.willMove(toParent: nil)
+                    child.view.removeFromSuperview()
+                    child.removeFromParent()
+                }
             }
         }
     }
