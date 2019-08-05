@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var quoteLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
 
@@ -30,6 +31,15 @@ class ViewController: UIViewController {
         DispatchQueue.main.async {
             self.quoteLabel.text = quoteInfo.quote
             self.authorLabel.text = quoteInfo.author
+
+            // Load image from URL
+            if let data = try? Data(contentsOf: quoteInfo.background) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self.imageView.image = image
+                    }
+                }
+            }
         }
     }
 }

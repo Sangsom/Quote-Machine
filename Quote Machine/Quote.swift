@@ -11,6 +11,7 @@ import Foundation
 struct Quote: Codable {
     var quote: String
     var author: String
+    var background: URL
 }
 
 struct Quotes: Codable {
