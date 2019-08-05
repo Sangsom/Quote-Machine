@@ -29,6 +29,7 @@ class ViewController: UIViewController {
 
     func updateUI(with quoteInfo: Quote) {
         DispatchQueue.main.async {
+            self.navigationItem.title = quoteInfo.title
             self.quoteLabel.text = quoteInfo.quote
             self.authorLabel.text = quoteInfo.author
 

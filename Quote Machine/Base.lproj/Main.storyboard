@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--QOD-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quote_Machine" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xxi-Dm-5Ai">
-                                <rect key="frame" x="0.0" y="44" width="414" height="414"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Xxi-Dm-5Ai" secondAttribute="height" multiplier="1:1" id="g08-04-gqs"/>
                                 </constraints>
@@ -53,7 +53,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="QOD" id="Rug-OI-oOV"/>
+                    <navigationItem key="navigationItem" id="hiQ-cp-wfU"/>
                     <connections>
                         <outlet property="authorLabel" destination="HDW-l8-vLa" id="SXz-aN-Jt8"/>
                         <outlet property="imageView" destination="Xxi-Dm-5Ai" id="84p-7v-bzZ"/>
@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2025" y="-1248"/>
+            <point key="canvasLocation" x="2934.7826086956525" y="-1248.2142857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="inT-h7-Sqk">
@@ -74,7 +74,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zF1-7a-5h2"/>
+                        <segue destination="EtL-KW-Vud" kind="relationship" relationship="viewControllers" id="zF1-7a-5h2"/>
                         <segue destination="cw7-Pp-3rX" kind="relationship" relationship="viewControllers" id="i31-h8-IAf"/>
                     </connections>
                 </tabBarController>
@@ -111,6 +111,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMh-Pz-kjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2025" y="-536"/>
+        </scene>
+        <!--QOD-->
+        <scene sceneID="hpM-oK-kYU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EtL-KW-Vud" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="QOD" id="Rug-OI-oOV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JDm-jd-aoo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qvM-8g-17O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yyk-Hn-QHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2024.6376811594205" y="-1248.2142857142856"/>
         </scene>
     </scenes>
 </document>
