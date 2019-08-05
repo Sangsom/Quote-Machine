@@ -45,4 +45,8 @@ class CategoriesTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Open VC to see quote by category
+    }
+
 }

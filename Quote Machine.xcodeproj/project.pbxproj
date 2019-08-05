@@ -16,6 +16,7 @@
 		1B50F1F722F45E9200E54023 /* QuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50F1F622F45E9200E54023 /* QuoteController.swift */; };
 		1B50F1FA22F830AE00E54023 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50F1F922F830AE00E54023 /* CategoriesTableViewController.swift */; };
 		1B50F1FC22F8380600E54023 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50F1FB22F8380600E54023 /* Categories.swift */; };
+		1B50F1FE22F841F700E54023 /* QuoteByCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50F1FD22F841F700E54023 /* QuoteByCategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		1B50F1F822F46A0300E54023 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1B50F1F922F830AE00E54023 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		1B50F1FB22F8380600E54023 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		1B50F1FD22F841F700E54023 /* QuoteByCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteByCategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				1B50F1F022F444C100E54023 /* Quote.swift */,
 				1B50F1FB22F8380600E54023 /* Categories.swift */,
 				1B50F1DE22F31B7100E54023 /* Main.storyboard */,
+				1B50F1FD22F841F700E54023 /* QuoteByCategoryViewController.swift */,
 				1B50F1F922F830AE00E54023 /* CategoriesTableViewController.swift */,
 				1B50F1E122F31B7100E54023 /* Assets.xcassets */,
 				1B50F1E322F31B7100E54023 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				1B50F1DD22F31B7100E54023 /* ViewController.swift in Sources */,
 				1B50F1F122F444C100E54023 /* Quote.swift in Sources */,
 				1B50F1DB22F31B7100E54023 /* AppDelegate.swift in Sources */,
+				1B50F1FE22F841F700E54023 /* QuoteByCategoryViewController.swift in Sources */,
 				1B50F1FA22F830AE00E54023 /* CategoriesTableViewController.swift in Sources */,
 				1B50F1FC22F8380600E54023 /* Categories.swift in Sources */,
 			);
