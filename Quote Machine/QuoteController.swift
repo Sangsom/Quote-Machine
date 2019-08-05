@@ -44,4 +44,22 @@ class QuoteController {
         }
         task.resume()
     }
+
+    func fetchQuoteByCategory(_ categoryName: String, completion: @escaping (QuoteContents?) -> Void) {
+        let quoteURL = baseURL.appendingPathComponent("qod.json?")
+        var components = URLComponents(url: quoteURL, resolvingAgainstBaseURL: true)!
+        components.queryItems = [URLQueryItem(name: "category", value: categoryName)]
+        let url = components.url!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            let jsonDecode = JSONDecoder()
+            if let data = data,
+                let quoteData = try? jsonDecode.decode(QuoteContents.self, from: data) {
+                completion(quoteData)
+            } else {
+                print("Either no data was returned, or data was not serialized.")
+                completion(nil)
+            }
+        }
+        task.resume()
+    }
 }
