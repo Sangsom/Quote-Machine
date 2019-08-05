@@ -10,4 +10,4 @@ In this project I was practicing on the following skills:
 - UIActivityIndicatorView
 - UIAlertController
 
-[Quote Machine](https://i.imgur.com/NPF0IRm.gifv)
+![Quote Machine](https://i.imgur.com/NPF0IRm.gifv)
