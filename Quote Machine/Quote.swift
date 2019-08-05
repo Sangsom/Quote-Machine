@@ -9,6 +9,7 @@
 import Foundation
 
 struct Quote: Codable {
+    var title: String
     var quote: String
     var author: String
     var background: URL
