@@ -19,10 +19,6 @@ struct Quotes: Codable {
     var quotes: [Quote]
 }
 
-struct Contents: Codable {
+struct QuoteContents: Codable {
     var contents: Quotes
-}
-
-struct Categories: Codable {
-    var categories: [String: String]
 }
